@@ -1,8 +1,9 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-This is Deimund Designs Parallax theme for WordPress developed from the underscores theme. The origonal README is below with all the info on underscores. I use Bootstrap and rely on it for all of the normalization and the navigation, so most of what it says about the CSS doesn't apply to this theme. I did leave the js/navigation.js file, although I don't use it. Contact me with any questions at aaron@deimunddesigns.net.
+
 _s
 ===
+This is a parallax background theme for WordPress developed by Deimund Designs from the underscores theme. The origonal README is below with all the info on underscores. I use Bootstrap and rely on it for all of the normalization and the navigation, so most of what it says about the CSS doesn't apply to this theme. I did leave the js/navigation.js file, although I don't use it. Contact me with any questions at aaron@deimunddesigns.net.
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
