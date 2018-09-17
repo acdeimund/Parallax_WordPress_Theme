@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
 
-_s
+Deimund Designs Parallax Theme For WordPress
 ===
 This is a parallax background theme for WordPress developed by Deimund Designs from the underscores theme. The origonal README is below with all the info on underscores. I use Bootstrap and rely on it for all of the normalization and the navigation, so most of what it says about the CSS doesn't apply to this theme. I did leave the js/navigation.js file, although I don't use it. Contact me with any questions at aaron@deimunddesigns.net.
 

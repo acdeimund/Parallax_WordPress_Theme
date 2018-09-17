@@ -120,15 +120,24 @@ add_action( 'widgets_init', 'parallax_widgets_init' );
  * Enqueue scripts and styles.
  */
 function parallax_scripts() {
-	wp_enqueue_style( 'parallax-style', get_stylesheet_uri() );
+	// Loads bootstrap scripts and dependancies
+	wp_enqueue_script( 'popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), null, true );
+	wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.2.1.slim.min.js', array(), null, true );
+	wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' );
 
+	// Loads bootstrap sylesheet
+	wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+	
+	// Theme resources
 	wp_enqueue_script( 'parallax-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'parallax-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	// User defined resources
+	wp_enqueue_style( 'user-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'user-scripts', get_template_directory_uri() . '/js/scripts.js');
 }
 add_action( 'wp_enqueue_scripts', 'parallax_scripts' );
 

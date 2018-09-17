@@ -27,32 +27,40 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+			if ( has_custom_logo() ) :
+				the_custom_logo();
+			else :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
 			endif;
-			$parallax_description = get_bloginfo( 'description', 'display' );
-			if ( $parallax_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $parallax_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'parallax' ); ?></button>
+		<nav id="site-navigation" class="main-navigation navbar navbar-expand-sm navbar-toggleable-md navbar-dark bg-faded">
+			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class' 		 => 'navbar-nav ml-auto mt-2 mt-lg-0',
+						'container_class' => 'collapse navbar-collapse menu-primary-container',
+						'container_id' 	 => 'nav-content'
+					) );
 			?>
 		</nav><!-- #site-navigation -->
+		
+		
+
+
+
+
+	
+	<!-- Links --> 
+
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
