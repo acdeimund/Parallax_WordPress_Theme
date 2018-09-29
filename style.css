@@ -79,18 +79,6 @@ TABLE OF CONTENTS:
 html,
 body{
   position: relative;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-body{
-  background-image: url("https://www.dropbox.com/s/c9ymfrzg0jaxh49/wood-dirt-dirty-grunge-preview.jpg?raw=1");
-
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
-h1, p{
-  color: white;
-  text-align: center;
 }
 
 /******************************
@@ -192,7 +180,6 @@ Intro Elements
 ******************************/
 .content-header{
   margin-top: 120px;
-  background-image: url("https://www.dropbox.com/s/234s1omqlmlbttn/Woods.jpg?raw=1");
   min-height: 550px;
   width: 100%;
   background-repeat: no-repeat;
@@ -203,7 +190,6 @@ Intro Elements
 }
 
 .site-title{
-  font-family: 'Shadows Into Light', cursive;
   font-size: 4em;
   padding-top: 125px;
 }
