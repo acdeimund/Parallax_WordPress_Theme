@@ -1,7 +1,6 @@
 /** Note: document.ready does not allow pictures to load.
     Since the position of the .text-container divs rely
     on that, we use the .on("load") function instead. **/
-
 jQuery(window).on("load", function(){ // Allows pictures to load
 
 // Create array for storing text-container locations
@@ -53,11 +52,3 @@ jQuery(window).scroll(function(){
 }); // Ends .scroll
 
 }); // Ends .on(load)
-
-// Add event listener for menu button
-jQuery('#primary-navigation-button').click(navbarToggle);
-
-//Navabr Toggle Function
-function navbarToggle() {
-    this.classList.toggle("change");
-}

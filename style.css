@@ -158,26 +158,22 @@ a:focus{
 }
 
 /**** Animation for the hamburger menu. ****/
-.change .bar1 {
+.toggled .navbar-toggler .bar1 {
   -webkit-transform: rotate(-45deg) translate(-6px, 5px);
   transform: rotate(-45deg) translate(-6px, 5px);
 }
 
-.change .bar2 {
+.toggled .navbar-toggler .bar2 {
   opacity: 0;
 }
 
-.change .bar3 {
+.toggled .navbar-toggler .bar3 {
   -webkit-transform: rotate(45deg) translate(-5px, -5px);
   transform: rotate(45deg) translate(-5px, -5px);
 }
 
 .dropdown-menu{
   transition: all .04s;
-}
-
-.logo{
-  width: 200px;
 }
 
 /******************************

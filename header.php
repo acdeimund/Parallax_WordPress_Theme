@@ -24,43 +24,47 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'parallax' ); ?></a>
 
+<!-- Start header -->
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			if ( has_custom_logo() ) :
-				the_custom_logo();
-			else :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			endif;
-				?>
-		</div><!-- .site-branding -->
+		<nav id="site-navigation" class="main-navigation navbar navbar-expand-md sticky-top navbar-dark bg-custom">
 
-		<nav id="site-navigation" class="main-navigation navbar navbar-expand-sm navbar-toggleable-md navbar-dark bg-faded">
-			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+				<div class="site-branding">
+				<?php
+				if ( has_custom_logo() ) :
+					the_custom_logo();
+				else :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				endif;
+					?>
+				</div><!-- .site-branding -->
+			<!-- Hamberger Button -->
+			<button id="primary-navigation-button"class="navbar-toggler"
+							type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
 			</button>
+			<!-- Main Navigation -->
+
 			<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
 						'menu_id'        => 'primary-menu',
-						'menu_class' 		 => 'navbar-nav ml-auto mt-2 mt-lg-0',
+						'menu_class' 		 => 'navbar-nav ml-auto',
 						'container_class' => 'collapse navbar-collapse menu-primary-container',
-						'container_id' 	 => 'nav-content'
+						'container_id' 	 => 'navbarSupportedContent'
 					) );
 			?>
+
 		</nav><!-- #site-navigation -->
-		
-		
-
-
-
-
-	
-	<!-- Links --> 
-
-
 	</header><!-- #masthead -->
+
+	<!-- Ends the Header -->
+	<!-- Starts Main Content -->
 
 	<div id="content" class="site-content">
