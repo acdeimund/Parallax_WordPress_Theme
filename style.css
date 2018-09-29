@@ -110,6 +110,11 @@ header{
   background-color: black;
 }
 
+.custom-logo{
+	height: 90px;
+	padding: 5px;
+}
+
 /**** Colors of nav items ****/
 
 .navbar-dark .navbar-nav .nav-link:hover{
