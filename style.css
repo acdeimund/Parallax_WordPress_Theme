@@ -51,10 +51,52 @@ No Media Queary
 
 */
 
-/******************* TABLE OF CONTENTS: **********************/
+/******************************
+Fonts Used
+******************************/
+/*
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Roboto Condensed', sans-serif;
+*/
 
+/******************************
+Colors Used
+******************************/
 
-/********************** ### Header ***************************/
+/*
+#98e467 Light Green (Outlines)
+#a8f477 Bright Green (Hovers)
+*/
+
+/******************************
+TABLE OF CONTENTS:
+******************************/
+
+/******************************
+### Page-Wide Elements
+******************************/
+
+html,
+body{
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+  background-image: url("https://www.dropbox.com/s/c9ymfrzg0jaxh49/wood-dirt-dirty-grunge-preview.jpg?raw=1");
+
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+h1, p{
+  color: white;
+  text-align: center;
+}
+
+/******************************
+### Header
+******************************/
+
 header{
 	background: #000;
 }
@@ -67,7 +109,204 @@ header{
 	list-style: none
 }
 
-/****************** ### Accessibility ************************/
+.site-header{
+  z-index: 999;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+}
+
+.bg-custom {
+  background-color: black;
+}
+
+/**** Colors of nav items ****/
+
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: #98e467;
+}
+
+/**** All the border colors. ****/
+#primary-navigation-button{
+  border-color: #98e467;
+}
+
+button:focus,
+a:focus{
+  outline-color: #a8f477;
+}
+
+.form-control:focus{
+	box-shadow: none;
+	border-color: #a8f477;
+}
+
+/**** Attributes of the bars. ****/
+.bar1, .bar2, .bar3 {
+  width: 21px;
+  height: 1px;
+  background-color: #a8f477;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/**** Changes colors of buttons. ****/
+.navbar .btn-outline-success {
+    border-color: #a8f477;
+    color: #a8f477;
+}
+
+.navbar .btn-outline-success:hover,
+.navbar .btn-outline-success:focus {
+      background-color: #a8f477;
+      color: #000;
+}
+
+/**** Animation for the hamburger menu. ****/
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+  transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.dropdown-menu{
+  transition: all .04s;
+}
+
+.logo{
+  width: 200px;
+}
+
+/******************************
+Intro Elements
+******************************/
+.content-header{
+  margin-top: 120px;
+  background-image: url("https://www.dropbox.com/s/234s1omqlmlbttn/Woods.jpg?raw=1");
+  min-height: 550px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  border-bottom: 5px solid black;
+  text-shadow: 4px 2px 6px black;
+}
+
+.site-title{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 4em;
+  padding-top: 125px;
+}
+.tagline{
+  font-size: 1.5em;
+}
+.tagline-condensed{
+  font-size: 2em;
+}
+.quick-link{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 1.25em;
+  transform: translate(-50%, -50%);
+
+}
+
+.quick-link:hover{
+  text-decoration: none;
+  color: #a8f477;
+}
+.quick-link-container{
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height:120px;
+  border: 1px solid white;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 25px 25px;
+  background-color: rgba(0,0,0,.5);
+
+}
+.quick-link-row{
+  width: 100%;
+  text-align: center;
+}
+
+/******************************
+Home-page Sections
+******************************/
+.homepage-section{
+  position: relative;
+}
+.homepage-section-img{
+  width: 85%;
+  margin: 15% 5%;
+}
+.text-container{
+  position: absolute;
+  top: 35%;
+  right:0;
+  z-index: 2;
+  width: 85%;
+  min-height: 65%;
+  background: rgba(0,0,0,.7);
+  border: 1px solid white;
+}
+@media (min-width: 768px) {
+  .homepage-section{
+    position:relative;
+    background-color: transparent;
+    margin: 120px 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  .homepage-section-img{
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    border: 1px solid black;
+  }
+
+  .text-container{
+    position: absolute;
+    top: 50%;
+    right:0;
+    z-index: 2;
+    width: 85%;
+    min-height: 45%;
+    background: rgba(0,0,0,.7);
+    border: 1px solid white;
+  }
+}
+
+
+/******************************
+Footer
+******************************/
+.site-footer{
+  min-height:150px;
+  width:100%;
+  background-color: black;
+  position:absolute;
+  bottom:-150;
+}
+
+/******************************
+### Accessibility
+******************************/
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -108,24 +347,4 @@ header{
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
-}
-
-/******************* ### Alignments **************************/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
