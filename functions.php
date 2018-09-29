@@ -135,7 +135,7 @@ function parallax_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	
-	// User defined resources
+	// User defined resources. These should always be last for overriding things in third-party frameworks.
 	wp_enqueue_style( 'user-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'user-scripts', get_template_directory_uri() . '/js/scripts.js');
 }
