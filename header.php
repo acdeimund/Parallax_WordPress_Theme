@@ -53,11 +53,12 @@
 
 			<?php
 					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'menu_class' 		 => 'navbar-nav ml-auto',
-						'container_class' => 'collapse navbar-collapse menu-primary-container',
-						'container_id' 	 => 'navbarSupportedContent'
+						'theme_location' 	=> 'menu-1',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id' 	 	=> 'navbarSupportedContent',
+						'menu_id'        	=> 'primary-menu',
+						'menu_class' 		 	=> 'navbar-nav ml-auto',
+						'walker'					=> new Walker_Bootstrap_Nav_Header
 					) );
 			?>
 
